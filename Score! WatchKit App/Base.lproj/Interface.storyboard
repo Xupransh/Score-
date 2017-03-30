@@ -48,6 +48,7 @@
                         <label width="122" alignment="center" text="00:00:00" textAlignment="center" id="QuS-uz-LPI"/>
                         <button width="1" alignment="left" title="GAME OVER" id="8cu-Oa-6Sg">
                             <connections>
+                                <action selector="gameover" destination="AgC-eL-Hgc" id="D8D-Hg-Azv"/>
                                 <segue destination="2xd-cp-4Yj" kind="push" id="irx-5y-iHd"/>
                             </connections>
                         </button>

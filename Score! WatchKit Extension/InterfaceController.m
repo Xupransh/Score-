@@ -50,10 +50,12 @@ int count;
     {
         self.win_text.text=@"TEAM B WINS!";
     }
-    else{
+    else if (x==y) {
         self.win_text.text=@"IT'S A TIE!";
     }
-
+    x = 0;
+    y=0;
+   
 }
 
 - (void)didDeactivate {
@@ -63,14 +65,20 @@ int count;
 
 
 - (IBAction)increaseScoreA {
-    x++;
-    NSString *x_score = [NSString stringWithFormat : @"%d" , x];
-    self.score_a.text = x_score;
+    if (running == YES) {
+        x++;
+        NSString *x_score = [NSString stringWithFormat : @"%d" , x];
+        self.score_a.text = x_score;
+
+    }
 }
 - (IBAction)increaseScoreB {
+    if (running == YES)
+    {
     y++;
     NSString *y_score = [NSString stringWithFormat: @"%d" , y];
     self.score_b.text = y_score;
+}
 }
 - (IBAction)start_timer {
     if(running == NO)
@@ -96,6 +104,10 @@ int count;
 }
 
 
+- (IBAction)gameover {
+    
+
+}
 
 
 
